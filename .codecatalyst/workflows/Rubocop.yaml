@@ -21,4 +21,8 @@ Actions:
     Configuration:
       Steps:
         - Run: bundle install
-        - Run: bundle exec rubocop --require rubocop-rails --format junit --out report/rubocop.xml
+        - Run: bundle exec rubocop --require rubocop-rails --format junit --out
+            report/rpt-rubocop.xml
+      Container:
+        Registry: DockerHub
+        Image: mikoto2000/rails
