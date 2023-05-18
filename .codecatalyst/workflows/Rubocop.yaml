@@ -18,17 +18,7 @@ Actions:
       AutoDiscoverReports:
         Enabled: true
         ReportNamePrefix: rpt
-      Artifacts:
-        - Name: Rubocop
-          Files:
-            - report/rubocop.xml
     Configuration:
       Steps:
-        - Run: run-tests -h
-        - Run: echo "Hello, World!"
-        - Run: echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" >> report.xml
-        - Run: echo "<testsuite tests=\"1\" name=\"TestAgentJunit\" >" >> report.xml
-        - Run: echo "<testcase classname=\"TestAgentJunit\" name=\"Dummy
-            Test\"/></testsuite>" >> report.xml
-    Compute:
-      Type: EC2
+        - Run: bundle install
+        - Run: bundle exec rubocop --require rubocop-rails --format junit --out report/rubocop.xml
