@@ -26,3 +26,11 @@ Actions:
       Container:
         Registry: DockerHub
         Image: mikoto2000/rails
+    Compute:
+      Type: EC2
+    Caching:
+      FileCaching:
+        BUNDLE:
+          Path: /usr/local/bundle
+        NODE_MODULES:
+          Path: node_modules
