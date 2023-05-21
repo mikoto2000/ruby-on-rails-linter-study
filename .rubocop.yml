@@ -5,6 +5,7 @@ AllCops:
   Exclude:
     - "Gemfile"
     - "lib/templates/**/*"
+    - "vendor/**/*"
     - "bin/**/*"
     - "config/**/*"
     - "lib/templates/**/*"
