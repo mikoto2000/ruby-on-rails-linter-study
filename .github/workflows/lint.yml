@@ -20,6 +20,8 @@ jobs:
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
           bundler-cache: true
+      - name: rubocop ruby files
+        run: bundle exec rubocop --require rubocop-rails --format junit --out report/rpt-rubocop.xml
       - name: erblint erb files
         run: bundle exec erblint --format junit --lint-all > report/rpt-erblint.xml
       - name: Publish Test Report
