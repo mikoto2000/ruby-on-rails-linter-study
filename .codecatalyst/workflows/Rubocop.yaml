@@ -23,6 +23,15 @@ Actions:
         - Run: bundle install
         - Run: bundle exec rubocop --require rubocop-rails --format junit --out
             report/rpt-rubocop.xml
+        - Run: bundle exec erblint --format junit > report/rpt-erblint.xml
       Container:
         Registry: DockerHub
         Image: mikoto2000/rails
+    Compute:
+      Type: EC2
+    Caching:
+      FileCaching:
+        BUNDLE:
+          Path: /usr/local/bundle
+        NODE_MODULES:
+          Path: node_modules
