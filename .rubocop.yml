@@ -25,7 +25,6 @@ Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
 
 # メソッド呼び出しが複数行になった場合のインデントは、
-<<<<<<< HEAD
 # レシーバーの先頭から 1 段インデントを下げる
 #
 #     ok: foo = bar.method1()
@@ -36,7 +35,7 @@ Layout/IndentationConsistency:
 #           .method3()
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented_relative_to_receiver
-=======
+
 # 直前行の先頭から 1 段インデントを下げる
 #
 #     ok: foo = bar.method1()
@@ -47,7 +46,6 @@ Layout/MultilineMethodCallIndentation:
 #                 .method3()
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
->>>>>>> 4eeaec6c94afe53c2732e1637708b7d54c4f508b
 
 # 空ブロックは 1 行にまとめる
 #
@@ -57,12 +55,9 @@ Layout/MultilineMethodCallIndentation:
 Lint/EmptyBlock:
   Enabled: false
 
-<<<<<<< HEAD
-=======
 Style/Documentation:
   Enabled: false
 
->>>>>>> 4eeaec6c94afe53c2732e1637708b7d54c4f508b
 # 空メソッドは 1 行にまとめない
 #
 #     ok: def foo(bar)
@@ -71,12 +66,9 @@ Style/Documentation:
 Style/EmptyMethod:
   EnforcedStyle: expanded
 
-<<<<<<< HEAD
-=======
 Style/FrozenStringLiteralComment:
   Enabled: false
 
->>>>>>> 4eeaec6c94afe53c2732e1637708b7d54c4f508b
 # 文字列リテラルはダブルクオーテーションで囲む
 #
 #     ok: "text"
@@ -84,7 +76,3 @@ Style/FrozenStringLiteralComment:
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4eeaec6c94afe53c2732e1637708b7d54c4f508b
