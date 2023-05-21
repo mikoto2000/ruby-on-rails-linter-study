@@ -25,18 +25,6 @@ AllCops:
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
 
-# メソッド呼び出しが複数行になった場合のインデントは、
-# レシーバーの先頭から 1 段インデントを下げる
-#
-#     ok: foo = bar.method1()
-#                 .method2()
-#                 .method3()
-#     ng: foo = bar.method1()
-#           .method2()
-#           .method3()
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented_relative_to_receiver
-
 # 直前行の先頭から 1 段インデントを下げる
 #
 #     ok: foo = bar.method1()
