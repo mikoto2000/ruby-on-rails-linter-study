@@ -1,8 +1,9 @@
 ---
 glob: "**/*.{html,text,js}{+*,}.erb"
 exclude:
-  - 'vendor/**/*'
+  - 'lib/templates/**/*'
   - 'node_modules/**/*'
+  - 'vendor/**/*'
 linters:
   Rubocop:
     enabled: true
