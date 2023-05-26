@@ -21,8 +21,10 @@ jobs:
         with:
           bundler-cache: true
       - name: rubocop ruby files
-        run: bundle exec rubocop --format junit --out report/rpt-rubocop.xml
+        continue-on-error: true
+        run: bundle exec rubocop --no-exclude-limit --extra-details --format junit --out report/rpt-rubocop.xml
       - name: erblint erb files
+        continue-on-error: true
         run: bundle exec erblint --format junit --lint-all > report/rpt-erblint.xml
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v3
