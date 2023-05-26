@@ -7,11 +7,13 @@ class RolesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index" do
     get roles_url
+
     assert_response :success
   end
 
   test "should get new" do
     get new_role_url
+
     assert_response :success
   end
 
@@ -25,16 +27,19 @@ class RolesControllerTest < ActionDispatch::IntegrationTest
 
   test "should show role" do
     get role_url(@role)
+
     assert_response :success
   end
 
   test "should get edit" do
     get edit_role_url(@role)
+
     assert_response :success
   end
 
   test "should update role" do
     patch role_url(@role), params: { role: { name: @role.name } }
+
     assert_redirected_to role_url(@role)
   end
 

@@ -1,13 +1,13 @@
 class RolesController < ApplicationController
   include Pagy::Backend
-  before_action :set_role, only: %i[ show edit update destroy ]
+  before_action :set_role, only: %i[show edit update destroy]
 
   # GET /roles
   def index
     @roles = Role
-        .all
+      .all
     @q = @roles.ransack(params[:q])
-    @q.sorts = 'id asc' if @q.sorts.empty?
+    @q.sorts = "id asc" if @q.sorts.empty?
     @pagy, @roles = pagy(@q.result, page: params[:page], items: params[:items])
   end
 
@@ -29,7 +29,7 @@ class RolesController < ApplicationController
     @role = Role.new(role_params)
 
     if @role.save
-      redirect_to @role, notice: "Role was successfully created."
+      redirect_to @role, notice: _("Role was successfully created.")
     else
       render :new, status: :unprocessable_entity
     end
@@ -38,7 +38,7 @@ class RolesController < ApplicationController
   # PATCH/PUT /roles/1
   def update
     if @role.update(role_params)
-      redirect_to @role, notice: "Role was successfully updated."
+      redirect_to @role, notice: _("Role was successfully updated.")
     else
       render :edit, status: :unprocessable_entity
     end
@@ -47,14 +47,15 @@ class RolesController < ApplicationController
   # DELETE /roles/1
   def destroy
     @role.destroy
-    redirect_to roles_url, notice: "Role was successfully destroyed."
+    redirect_to roles_url, notice: _("Role was successfully destroyed.")
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_role
       @role = Role
-          .find(params[:id])
+        .find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
