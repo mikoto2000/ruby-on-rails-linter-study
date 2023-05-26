@@ -67,6 +67,10 @@ group :development do
   # gem "spring"
   gem "rubocop"
   gem "rubocop-rails"
+  gem "rubocop-performance"
+  gem "rubocop-minitest"
+  gem "rubocop-i18n"
+  gem "rubocop-thread_safety"
   gem "erb_lint", :github => 'mikoto2000/erb-lint', ref: '89ae2ee27721fa38ba2756dd191c7d50252fc943'
 end
 
