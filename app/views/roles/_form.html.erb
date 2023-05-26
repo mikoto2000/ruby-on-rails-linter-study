@@ -1,4 +1,4 @@
-<%= form_with(model: role, html: { class: ['form-control', 'form-control-sm'] }) do |form| -%>
+<%= form_with(model: role, html: { class: %w[form-control form-control-sm] }) do |form| -%>
   <%- if role.errors.any? -%>
   <div style="color: red">
     <h2><%= t("errors.template.header", model: Role.model_name.human, count: role.errors.count) %></h2>
@@ -15,29 +15,29 @@
   <div>
     <%= form.label :id, style: "display: block" %>
     <div class="ps-2">
-      <%= form.number_field :id, class: ['form-control', 'form-control-sm'], disabled: true %>
+      <%= form.number_field :id, class: %w[form-control form-control-sm], disabled: true %>
     </div>
   </div>
   <%- end -%>
   <div>
     <%= form.label :name, style: "display: block" %>
     <div class="ps-2">
-      <%= form.text_field :name, class: ['form-control', 'form-control-sm'] %>
+      <%= form.text_field :name, class: %w[form-control form-control-sm] %>
     </div>
   </div>
   <%- if request.path_info.include?('edit') %>
   <div>
     <%= form.label :created_at, style: "display: block" %>
     <div class="ps-2">
-      <%= form.datetime_field :created_at, class: ['form-control', 'form-control-sm'], disabled: true %>
+      <%= form.datetime_field :created_at, class: %w[form-control form-control-sm], disabled: true %>
     </div>
     <%= form.label :updated_at, style: "display: block" %>
     <div class="ps-2">
-      <%= form.datetime_field :updated_at, class: ['form-control', 'form-control-sm'], disabled: true %>
+      <%= form.datetime_field :updated_at, class: %w[form-control form-control-sm], disabled: true %>
     </div>
   </div>
   <%- end -%>
   <div>
-    <%= form.submit class: ['btn', 'btn-primary'] %>
+    <%= form.submit class: %w[btn btn-primary] %>
   </div>
 <% end %>
