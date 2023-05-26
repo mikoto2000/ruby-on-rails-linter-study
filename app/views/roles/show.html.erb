@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= Role.model_name.human %></h1>
+
+<%= render @role %>
+
+<div>
+  <%= link_to t("view.show.move_to_update", model: Role.model_name.human), edit_role_path(@role) %> |
+  <%= link_to t("view.show.move_to_index", model: Role.model_name.human.pluralize), roles_path %>
+
+  <%= button_to t("helpers.submit.delete"), @role, method: :delete, class: ['btn', 'btn-primary'], data: { turbo_confirm: t('helpers.dialog.delete', id: @role.id) } %>
+</div>
