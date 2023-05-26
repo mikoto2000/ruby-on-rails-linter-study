@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/mikoto2000/erb-lint.git
-  revision: c1548f2aedbc62eb43ee9c6bd3803c2eaa80f0b4
+  revision: 89ae2ee27721fa38ba2756dd191c7d50252fc943
+  ref: 89ae2ee27721fa38ba2756dd191c7d50252fc943
   specs:
     erb_lint (0.4.0)
       activesupport
