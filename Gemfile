@@ -67,7 +67,7 @@ group :development do
   # gem "spring"
   gem "rubocop"
   gem "rubocop-rails"
-  gem "erb_lint", :github => 'mikoto2000/erb-lint'
+  gem "erb_lint", :github => 'mikoto2000/erb-lint', ref: '89ae2ee27721fa38ba2756dd191c7d50252fc943'
 end
 
 group :test do
