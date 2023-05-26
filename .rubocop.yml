@@ -71,3 +71,7 @@ Style/FrozenStringLiteralComment:
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
+# gettext は使わないので無効化する
+I18n/GetText:
+  Enabled: false
+
